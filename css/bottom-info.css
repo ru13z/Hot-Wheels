@@ -1,0 +1,9 @@
+/* CSS Document */
+.bottom-info{
+	padding-top: 65px;
+	padding-bottom: 44px;
+}
+.bottom-info__row{
+	display: flex;
+	justify-content: space-between;
+}

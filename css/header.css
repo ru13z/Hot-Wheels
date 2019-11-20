@@ -1,0 +1,107 @@
+/* CSS Document */
+.header{
+	height: 800px;
+	width: 100%;
+	padding-top: 36px;
+	background-color: #f3e1d5;
+	background-image: url('../img/header/bg-1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.header__nav-row{
+	margin-bottom: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__nav{
+	display: flex;
+	color: #404040;
+	font-family: 'Teko', sans-serif;
+	font-weight: 600;
+	font-size: 23px;
+	text-transform: uppercase;
+	letter-spacing: 0.45px;
+	
+}
+.header__nav-link{
+	position: relative;
+	color: #404040;
+	text-decoration: none;
+	margin-right: 52px;
+}
+.header__nav-link::after{
+	position: absolute;
+	right: -30px;
+	top: 12px;
+	content: '';
+	display: block;
+	width: 7px;
+	height: 7px;
+	background-color: #004cff;
+	transform: rotate(45deg);
+	pointer-events: none;
+}
+.header__nav-link:last-child::after{
+	display: none;
+}
+.header__nav-link:last-child{
+	margin-right: 0;
+}
+.header__nav-link:hover, .header__nav-link--activ{
+	color: #004cff;
+}
+.header__button{
+	height: 66px;
+	padding-top: 23px;
+	padding-left: 38px;
+	padding-right: 38px;
+	line-height: 1;
+	background-color: #004cff;
+	color: #ffffff;
+	font-family: 'Teko', sans-serif;
+	font-weight: 600;
+	font-size: 23px;
+	text-transform: uppercase;
+	letter-spacing: 0.45px;
+	text-decoration: none;
+	
+	transition: background-color 0.2s ease-in;
+}
+.header__button:hover{
+	background-color: #0a3fbb;
+}
+
+.header__promo{
+	max-width: 400px;
+	
+}
+.header__title{
+	margin-bottom: 60px;
+	color: #ffffff;
+	font-family: 'Teko', sans-serif;
+	font-size: 68px;
+	font-weight: 700;
+	line-height: 72px;
+	letter-spacing: 2.73px;
+}
+.header__promo-btn{
+	display: inline-block;
+	padding-top: 14px;
+	padding-left: 48px;
+	padding-right: 48px;
+	height: 61px;
+	border: 6px solid #ffffff;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	transition: border-color 0.2s ease-in, color 0.2s ease-in;
+}
+.header__promo-btn:hover{
+	border-color: #ffd03b;
+	color: #ffd03b;
+}
