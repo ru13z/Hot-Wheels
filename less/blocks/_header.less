@@ -8,12 +8,12 @@
 	background-size: cover;
 	background-position: center;
 
-	@media(min-height: 530px) {
-		height: calc(~"100vh - 78px");
-	}
+	// @media(min-height: 530px) {
+	// 	height: calc(~"100vh - 78px");
+	// }
 
-	@media(min-height: 880px) {
-		height: 800px;
+	@media(min-width: 980px) {
+		height: 880px;
 	}
 
 }
@@ -147,4 +147,10 @@
 .header__promo-btn:hover {
 	border-color: #ffd03b;
 	color: #ffd03b;
+}
+
+.header__nav-button {
+	@media(min-width: 980px) {
+		display: none;
+	}
 }
