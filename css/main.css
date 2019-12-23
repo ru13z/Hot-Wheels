@@ -14,9 +14,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .container {
-  max-width: 1060px;
+  max-width: 1090px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
 }
 .container-wide {
   max-width: 1350px;
@@ -42,8 +43,14 @@ body {
           align-items: center;
 }
 .top-panel__notification {
-  font-size: 12px;
+  font-size: 11px;
+  margin-right: 15px;
   font-weight: 500;
+}
+@media (min-width: 780px) {
+  .top-panel__notification {
+    font-size: 12px;
+  }
 }
 .top-panel__icons {
   display: -webkit-box;
@@ -61,36 +68,59 @@ body {
 }
 /* CSS Document */
 .header {
-  height: 800px;
   width: 100%;
+  height: 454px;
   padding-top: 36px;
   background-color: #f3e1d5;
-  background-image: url('../img/header/bg-1.jpg');
+  background-image: url("../img/header/bg-1.jpg");
   background-size: cover;
   background-position: center;
 }
+@media (min-height: 530px) {
+  .header {
+    height: calc(100vh - 78px);
+  }
+}
+@media (min-height: 880px) {
+  .header {
+    height: 800px;
+  }
+}
 .header__nav-row {
-  margin-bottom: 150px;
+  margin-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (min-width: 980px) {
+  .header__nav-row {
+    margin-bottom: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #404040;
-  font-family: 'Teko', sans-serif;
-  font-weight: 600;
-  font-size: 23px;
-  text-transform: uppercase;
-  letter-spacing: 0.45px;
+  display: none;
+}
+@media (min-width: 980px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #404040;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+  }
 }
 .header__nav-link {
   position: relative;
@@ -102,7 +132,7 @@ body {
   position: absolute;
   right: -30px;
   top: 12px;
-  content: '';
+  content: "";
   display: block;
   width: 7px;
   height: 7px;
@@ -122,21 +152,27 @@ body {
   color: #004cff;
 }
 .header__button {
-  height: 66px;
-  padding-top: 23px;
-  padding-left: 38px;
-  padding-right: 38px;
-  line-height: 1;
-  background-color: #004cff;
-  color: #ffffff;
-  font-family: 'Teko', sans-serif;
-  font-weight: 600;
-  font-size: 23px;
-  text-transform: uppercase;
-  letter-spacing: 0.45px;
-  text-decoration: none;
-  -webkit-transition: background-color 0.2s ease-in;
-  transition: background-color 0.2s ease-in;
+  display: none;
+}
+@media (min-width: 980px) {
+  .header__button {
+    display: inline-block;
+    height: 66px;
+    padding-top: 23px;
+    padding-left: 38px;
+    padding-right: 38px;
+    line-height: 1;
+    background-color: #004cff;
+    color: #ffffff;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    text-decoration: none;
+    -webkit-transition: background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
+  }
 }
 .header__button:hover {
   background-color: #0a3fbb;
@@ -145,13 +181,23 @@ body {
   max-width: 400px;
 }
 .header__title {
+  font-size: 42px;
   margin-bottom: 60px;
   color: #ffffff;
-  font-family: 'Teko', sans-serif;
-  font-size: 68px;
+  font-family: "Teko", sans-serif;
   font-weight: 700;
-  line-height: 72px;
+  line-height: 1.05;
   letter-spacing: 2.73px;
+}
+@media (min-width: 480px) {
+  .header__title {
+    font-size: 52px;
+  }
+}
+@media (min-width: 980px) {
+  .header__title {
+    font-size: 68px;
+  }
 }
 .header__promo-btn {
   display: inline-block;
@@ -161,7 +207,7 @@ body {
   height: 61px;
   border: 6px solid #ffffff;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
@@ -172,6 +218,74 @@ body {
 .header__promo-btn:hover {
   border-color: #ffd03b;
   color: #ffd03b;
+}
+.menu-icon-wrapper {
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu-icon {
+  position: relative;
+  width: 30px;
+  height: 5px;
+  background-color: #024cfb;
+}
+.menu-icon::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #024cfb;
+  -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+}
+.menu-icon::after {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #024cfb;
+  -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+}
+.menu-icon.menu-icon-active {
+  background-color: transparent;
+}
+.menu-icon.menu-icon-active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+  -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+}
+.menu-icon.menu-icon-active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+  -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
 /* CSS Document */
 .top-info {
