@@ -1,26 +1,36 @@
 /* CSS Document */
-.top-panel{
+.top-panel {
 	width: 100%;
 	height: 78px;
 	background-color: #262626;
 	color: #f8f8f8;
 }
-.row-top-panel{
+
+.row-top-panel {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.top-panel__notification{
-	font-size: 12px;
+
+.top-panel__notification {
+	font-size: 11px;
+	margin-right: 15px;
 	font-weight: 500;
+
+	@media(min-width: 780px) {
+		font-size: 12px;
+	}
 }
-.top-panel__icons{
+
+.top-panel__icons {
 	display: flex;
 	align-items: center;
 }
-.top-panel__link{
+
+.top-panel__link {
 	margin-right: 28px;
 }
-.top-panel__link:last-child{
+
+.top-panel__link:last-child {
 	margin-right: 0px;
 }
