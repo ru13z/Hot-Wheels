@@ -92,8 +92,16 @@
 	}
 }
 
-.info__content:hover {
+.info__content {
 	opacity: 1;
+
+	@media(min-width: 992px) {
+		opacity: 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 .info__content-title {
@@ -135,7 +143,7 @@
 		left: 45px;
 	}
 
-	@media(min-width: 1100px) {
+	@media(min-width: 1360px) {
 		top: 100px;
 		left: 145px;
 		width: 381px;
@@ -166,7 +174,7 @@
 		width: 143px;
 	}
 
-	@media(min-width: 1100px) {
+	@media(min-width: 1360px) {
 		right: 68px;
 		bottom: 65px;
 	}
