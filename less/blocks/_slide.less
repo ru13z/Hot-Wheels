@@ -1,0 +1,57 @@
+.slide {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    display: flex;
+    align-items: center;
+
+    background-color: #f3e1d5;
+
+    background-size: cover;
+    background-position: center;
+    height: 454px;
+
+    @media(min-width: 980px) {
+        height: 800px;
+    }
+
+    .container {
+        flex-grow: 2;
+    }
+}
+
+//Контейнер для пагінації
+.header .owl-carousel .owl-dots {
+    position: absolute;
+    right: 115px;
+    top: 50%;
+    transform: translateY(-50%);
+    // width: 50px;
+    // height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    // background-color: red;
+}
+
+//точка в пагінації
+.header .owl-carousel .owl-dots .owl-dot {
+    margin-bottom: 23px;
+}
+
+.header .owl-carousel .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    border: 4.5px solid #404040;
+
+}
+
+//активна точка в пагінації
+.header .owl-carousel .owl-dots .owl-dot.active span {
+    border-color: #004cff;
+    background-color: #fff;
+}
